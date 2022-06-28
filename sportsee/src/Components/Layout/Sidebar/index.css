@@ -1,0 +1,45 @@
+.container {
+      height: 100vh;
+      background: black;
+      width: 8%;
+      position: absolute;
+}
+
+.side-nav .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: black;
+      align-items: center;
+      position: relative;
+      left: -15%;
+}
+
+.test {
+      color: white;
+}
+
+.side-nav {
+      height: 50%;
+      margin-top: 90%;
+}
+
+.nav-content {
+      height: 64px;
+      width: 64px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20%;
+      border-radius: 6px;
+}
+
+.lol1 {
+      position: absolute;
+      transform: rotate(-90deg);
+      left: -39px;
+      top: 70%;
+      width: 190px;
+}
