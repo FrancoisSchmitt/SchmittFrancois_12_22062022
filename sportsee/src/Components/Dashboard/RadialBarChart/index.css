@@ -1,0 +1,39 @@
+.score-radial {
+      background-color: #fbfbfb;
+      height: 300px;
+      width: 300px;
+      border-radius: 10px;
+}
+
+.score-graphique {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+}
+
+.score-pourcentage {
+      background-color: #ffffff;
+      border-radius: 50%;
+      color: #74798c;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      height: 250px;
+      justify-content: center;
+      position: absolute;
+      text-align: center;
+      width: 250px;
+}
+
+/* .type-stats {
+      position: relative;
+      top: -40%;
+      left: 10%;
+} */
+
+.score-finally {
+      color: #000;
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+}

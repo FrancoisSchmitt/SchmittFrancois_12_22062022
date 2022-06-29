@@ -1,0 +1,14 @@
+.chart {
+      display: flex;
+      justify-content: center;
+      gap: 2%;
+      margin-left: -10%;
+      margin-top: 8%;
+      align-items: end;
+}
+
+.barchart-section {
+      display: flex;
+      justify-content: center;
+      margin-left: -10%;
+}

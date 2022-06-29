@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
-
-import Error from './Pages/Error';
+import Accueil from './Pages/Accueil';
+// import Error from './Pages/Error';
 import Dashboard from './Pages/Dashboard';
 import Header from './Components/Layout/Header';
 import Nav from './Components/Layout/Sidebar';
@@ -16,9 +16,10 @@ root.render(
                   <Header />
                   <Nav />
                   <Routes>
+                        <Route path="/" element={<Accueil />} />
                         <Route path="/dashboard/:id" element={<Dashboard />} />
-                        {/* <Route path="/404" element={<Error />} />
-                        <Route path="*" element={<Error />} /> */}
+                        {/* <Route path="/404" element={<Error />} /> */}
+                        {/* <Route path="*" element={<Error />} /> */}
                   </Routes>
             </BrowserRouter>
       </React.StrictMode>

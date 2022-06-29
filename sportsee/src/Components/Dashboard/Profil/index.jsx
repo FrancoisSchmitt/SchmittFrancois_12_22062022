@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 //   .then((actualData) => console.log(actualData));
 
-export default function Profil(firstName) {
+export default function Profil(username) {
       return (
             <section>
                   <div>
                         <h1>Bonjour</h1>
-                        <span></span>
+                        {/* <span>{username}</span> */}
                   </div>
             </section>
       );

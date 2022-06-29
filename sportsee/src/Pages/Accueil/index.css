@@ -1,0 +1,11 @@
+.lien-accueil {
+      border: none;
+      display: flex;
+      justify-content: center;
+}
+
+.btn-accueil {
+      border: none;
+      background: none;
+      font-size: 24px;
+}

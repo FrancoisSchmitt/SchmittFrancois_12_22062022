@@ -1,3 +1,4 @@
+import './index.css';
 import {
       LineChart,
       Line,
@@ -7,40 +8,41 @@ import {
       Tooltip,
 } from 'recharts';
 const data = [
-      { name: 'Page A', uv: 0, pv: 2400, amt: 2400 },
-      { name: 'Page B', uv: 100, pv: 200, amt: 400 },
-      { name: 'Page B', uv: 300, pv: 200, amt: 400 },
-      { name: 'Page c', uv: 150, pv: 200, amt: 400 },
-      { name: 'Page E', uv: 400, pv: 200, amt: 400 },
-      { name: 'Page B', uv: 500, pv: 1200, amt: 5400 },
+      { name: 'L', uv: 0, pv: 2400, amt: 2400 },
+      { name: 'M', uv: 100, pv: 200, amt: 400 },
+      { name: 'M', uv: 300, pv: 200, amt: 400 },
+      { name: 'J', uv: 150, pv: 200, amt: 400 },
+      { name: 'V', uv: 400, pv: 200, amt: 400 },
+      { name: 'S', uv: 600, pv: 1500, amt: 5400 },
+      { name: 'D', uv: 800, pv: 900, amt: 5400 },
 ];
 
 //   .then((actualData) => console.log(actualData));
 
 export default function Linechart() {
       return (
-            <section>
+            <div className="Linechart">
                   <div>
+                        <span className="type-stats-linechart">
+                              Durée moyenne des sessions
+                        </span>
+
                         <LineChart
-                              width={600}
+                              width={300}
                               height={300}
                               data={data}
                               margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
                         >
+                              <span>Durée moyenne des sessions</span>
                               <Line
                                     type="monotone"
                                     dataKey="uv"
                                     stroke="blue"
                               />
-                              <CartesianGrid
-                                    stroke="#ccc"
-                                    strokeDasharray="5 5"
-                              />
                               <XAxis dataKey="name" />
-                              <YAxis />
                               <Tooltip />
                         </LineChart>
                   </div>
-            </section>
+            </div>
       );
 }
