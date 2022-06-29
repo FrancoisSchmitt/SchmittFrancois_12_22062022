@@ -5,19 +5,34 @@ import Linechart from '../../Components/Dashboard/Linechart';
 import Radarchart from '../../Components/Dashboard/Radarchart';
 import RadialBar from '../../Components/Dashboard/RadialBarChart';
 import Barchart from '../../Components/Dashboard/Barchart';
-import * as Call from '../../Services/call';
+import {getMainInformation} from '../../Services/call';
 import './index.css';
-// import { Navigate } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+
+
+
 
 export default function Dashboard() {
       const { id } = useParams();
+      
+      const [mainData, setMainData] = useState(null)
+      // const [error, setError] = useState(false)
+      
+      useEffect(()=>{
+            (async ()=>{
+             let result = getMainInformation() 
+              setMainData(await result) 
+            })()
+      },[])
+      
+ if (mainData === null) return (<h1>loading</h1>);
+      
 
-     
-      // if (erreur === true) return <Navigate to="/404" />;
-
-      return (
+return (
             <section className="home">
-                  <Profil />
+                  <Profil firstname={mainData.userInfos.firstName} />
+
+                  {/* <h1>Bonjour  <span>{mainData.userInfos.firstName}</span></h1> */}
                   <section className="barchart-section">
                         <Barchart />
                   </section>
@@ -29,3 +44,4 @@ export default function Dashboard() {
             </section>
       );
 }
+
