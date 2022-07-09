@@ -2,47 +2,94 @@ import './index.css';
 import {
       LineChart,
       Line,
-      CartesianGrid,
       XAxis,
       YAxis,
       Tooltip,
+      ResponsiveContainer,
 } from 'recharts';
-const data = [
-      { name: 'L', uv: 0, pv: 2400, amt: 2400 },
-      { name: 'M', uv: 100, pv: 200, amt: 400 },
-      { name: 'M', uv: 300, pv: 200, amt: 400 },
-      { name: 'J', uv: 150, pv: 200, amt: 400 },
-      { name: 'V', uv: 400, pv: 200, amt: 400 },
-      { name: 'S', uv: 600, pv: 1500, amt: 5400 },
-      { name: 'D', uv: 800, pv: 900, amt: 5400 },
-];
+import propTypes from 'prop-types';
 
-//   .then((actualData) => console.log(actualData));
+export default function Linechart(props) {
+      const data = [
+            { name: 'L', dataLenght: props?.data?.[0] },
+            { name: 'M', dataLenght: props?.data?.[1] },
+            { name: 'M', dataLenght: props?.data?.[2] },
+            { name: 'J', dataLenght: props?.data?.[3] },
+            { name: 'V', dataLenght: props?.data?.[4] },
+            { name: 'S', dataLenght: props?.data?.[5] },
+            { name: 'D', dataLenght: props?.data?.[6] },
+      ];
 
-export default function Linechart() {
       return (
             <div className="Linechart">
-                  <div>
-                        <span className="type-stats-linechart">
-                              Durée moyenne des sessions
-                        </span>
-
+                  <h2 className="type-stats-linechart">
+                        Durée moyenne des sessions
+                  </h2>
+                  <ResponsiveContainer
+                        aspect={1.2}
+                        className="averageResponsive"
+                  >
                         <LineChart
-                              width={300}
-                              height={300}
+                              outerRadius="58%"
+                              width={258}
+                              height={263}
                               data={data}
-                              margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+                              margin={{
+                                    top: 5,
+                                    right: 1,
+                                    bottom: 5,
+                                    left: 1,
+                              }}
+                              onMouseMove={(e) => {
+                                    if (e.isTooltipActive === true) {
+                                          let div =
+                                                document.querySelector(
+                                                      '.averageResponsive'
+                                                );
+                                          let windowWidth = div.clientWidth;
+                                          let mouseXpercentage = Math.round(
+                                                (e.activeCoordinate.x /
+                                                      windowWidth) *
+                                                      100
+                                          );
+                                          div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
+                                    }
+                              }}
                         >
                               <span>Durée moyenne des sessions</span>
-                              <Line
-                                    type="monotone"
-                                    dataKey="uv"
-                                    stroke="blue"
+
+                              <Tooltip cursor={{ stroke: 'none' }} />
+                              <YAxis
+                                    hide={true}
+                                    domain={['dataMin -15', 'dataMax + 45']}
                               />
-                              <XAxis dataKey="name" />
-                              <Tooltip />
+                              <XAxis
+                                    tick={{
+                                          fill: '#ffffff',
+                                          opacity: 0.5,
+                                    }}
+                                    padding={{
+                                          left: 4,
+                                    }}
+                                    tickLine={false}
+                                    axisLine={false}
+                                    dataKey="name"
+                              />
+                              <Line
+                                    className="lineData"
+                                    type="natural"
+                                    dataKey="dataLenght"
+                                    dot={false}
+                                    stroke="#ffffff"
+                                    strokeWidth={2}
+                              />
                         </LineChart>
-                  </div>
+                  </ResponsiveContainer>
             </div>
       );
 }
+
+Linechart.propTypes = {
+      dataLenght: propTypes.number,
+      name: propTypes.string,
+};

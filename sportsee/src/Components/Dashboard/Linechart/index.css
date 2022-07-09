@@ -1,6 +1,20 @@
 .Linechart {
       background: #ff0000;
       width: 300px;
-      height: 300px;
+      height: 263px;
       border-radius: 10px;
+}
+
+.type-stats-linechart {
+      font-weight: 500;
+      font-size: 15px;
+      color: #ffffff70;
+      /* color: brown; */
+      position: absolute;
+      left: 17%;
+
+      width: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 0;
 }

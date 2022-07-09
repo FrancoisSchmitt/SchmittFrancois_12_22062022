@@ -27,7 +27,7 @@ export default function Nav() {
                                           <img
                                                 src={yoga}
                                                 alt="img banner"
-                                                className="lol"
+                                                className="image-sideBar"
                                           />
                                     </li>
                               </NavLink>
@@ -43,7 +43,7 @@ export default function Nav() {
                                           <img
                                                 src={Swimmer}
                                                 alt="img banner"
-                                                className="lol"
+                                                className="image-sideBar"
                                           />
                                     </li>
                               </NavLink>
@@ -59,7 +59,7 @@ export default function Nav() {
                                           <img
                                                 src={bike}
                                                 alt="img banner"
-                                                className="lol"
+                                                className="image-sideBar"
                                           />
                                     </li>
                               </NavLink>
@@ -75,13 +75,15 @@ export default function Nav() {
                                           <img
                                                 src={alters}
                                                 alt="img banner"
-                                                className="lol"
+                                                className="image-sideBar"
                                           />
                                     </li>
                               </NavLink>
                         </ul>
-                        <div className="lol1">
-                              <p className="test">Copiryght, SportSee 2020</p>
+                        <div className="Copyright-section">
+                              <p className="copyright-text">
+                                    Copiryght, SportSee 2020
+                              </p>
                         </div>
                   </div>
             </div>

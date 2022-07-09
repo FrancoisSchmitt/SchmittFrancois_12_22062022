@@ -1,37 +1,46 @@
 import { RadialBarChart, RadialBar } from 'recharts';
 import './index.css';
-const data = [
-      {
-            fill: '#FF0000',
-            value: 33,
-      },
-      {
+
+import propTypes from 'prop-types';
+
+export default function Radialbarchart(props) {
+      const data = {
             fill: 'transparent',
             value: 100,
-      },
-];
+      };
 
-export default function Radialbarchart() {
+      const NewData = {
+            value: props.data * 100,
+            fill: '#FF0000',
+      };
+
       return (
             <div className="score-radial">
-                  <span className="type-stats">Score</span>
+                  <h2 className="type-stats">Score</h2>
                   <div className="score-graphique">
                         <RadialBarChart
                               barSize={15}
-                              data={data}
+                              data={[data, NewData]}
                               innerRadius="100%"
                               startAngle={90}
                               endAngle={450}
-                              width={300}
-                              height={300}
+                              width={258}
+                              height={263}
                         >
-                              <RadialBar dataKey="value" />
+                              <RadialBar dataKey="value" cornerRadius={10} />
                         </RadialBarChart>
                         <div className="score-pourcentage">
-                              <span className="score-finally">12%</span>
+                              <span className="score-finally">
+                                    {NewData.value}%
+                              </span>
                               <span>de votre objectif</span>
                         </div>
                   </div>
             </div>
       );
 }
+
+Radialbarchart.propTypes = {
+      data: propTypes.number,
+      value: propTypes.number,
+};

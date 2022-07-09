@@ -1,0 +1,32 @@
+.performance-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 10px;
+      height: 124px;
+      width: 258px;
+      background: #fbfbfb;
+      margin-top: 17%;
+}
+
+.performance-image {
+      height: 70px;
+      width: 70px;
+      background: chartreuse;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.image svg {
+      height: 18px;
+      width: 18px;
+}
+
+.performance-data p:nth-child(1) {
+      font-weight: 700;
+}
+
+.performance-data p:nth-child(2) {
+      font-weight: 500;
+}

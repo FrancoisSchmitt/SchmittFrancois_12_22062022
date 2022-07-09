@@ -1,8 +1,15 @@
 .score-radial {
       background-color: #fbfbfb;
-      height: 300px;
-      width: 300px;
+      width: 258px;
+      height: 263px;
       border-radius: 10px;
+}
+
+.type-stats {
+      font-size: 18px;
+      position: absolute;
+      font-style: normal;
+      right: 38%;
 }
 
 .score-graphique {
@@ -18,18 +25,12 @@
       display: flex;
       flex-direction: column;
       font-size: 18px;
-      height: 250px;
+      height: 190px;
       justify-content: center;
       position: absolute;
       text-align: center;
-      width: 250px;
+      width: 190px;
 }
-
-/* .type-stats {
-      position: relative;
-      top: -40%;
-      left: 10%;
-} */
 
 .score-finally {
       color: #000;

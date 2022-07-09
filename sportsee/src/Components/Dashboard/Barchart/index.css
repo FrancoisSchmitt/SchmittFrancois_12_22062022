@@ -1,6 +1,12 @@
 .barchart {
-      width: 965px;
+      width: 835px;
       height: 320px;
       background: #fbfbfb;
       border-radius: 10px;
+}
+
+.recharts-responsive-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
