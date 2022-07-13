@@ -1,6 +1,6 @@
 .Linechart {
       background: #ff0000;
-      width: 300px;
+      width: 258px;
       height: 263px;
       border-radius: 10px;
 }
@@ -9,12 +9,24 @@
       font-weight: 500;
       font-size: 15px;
       color: #ffffff70;
-      /* color: brown; */
       position: absolute;
       left: 17%;
-
       width: 150px;
       display: flex;
       flex-wrap: wrap;
       height: 0;
+}
+
+.custom-tooltip-linechart {
+      width: 39px;
+      height: 25px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.custom-tooltip-linechart p {
+      font-size: 7px;
+      color: black;
 }

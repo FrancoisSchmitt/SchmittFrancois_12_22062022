@@ -10,7 +10,7 @@ import {
  * @var translate api english to french
  */
 
-const mock = true;
+const mock = false;
 
 const translate = {
       energy: 'Energie',
@@ -20,6 +20,12 @@ const translate = {
       speed: 'Vitesse',
       intensity: 'Intensité',
 };
+
+/**
+ * @function IdMock
+ * @param {*} id
+ * @returns Id: 0  = 12 or Id: 1 = 18
+ */
 
 function IDMock(id) {
       let positionID = 0;
@@ -45,19 +51,16 @@ async function getMainInformation(id) {
       try {
             if (mock) {
                   const positionArray = IDMock(id);
-
-                  // console.log(mock);
-                  // console.log(USER_MAIN_DATA);
                   const test = USER_MAIN_DATA[positionArray];
                   return test;
             }
+
             let res = await axios.get('http://localhost:3000/user' + `/${id}`);
 
             let data = res.data.data;
-            // console.log(data);
             return data;
       } catch (error) {
-            alert('getMainInformation : ' + error);
+            console.log('getMainInformation : ' + error);
       }
 }
 
@@ -71,9 +74,6 @@ async function getActivity(id) {
       try {
             if (mock) {
                   const positionArray = IDMock(id);
-
-                  // console.log(mock);
-                  // console.log(USER_ACTIVITY);
                   const test = USER_ACTIVITY[positionArray];
                   return test;
             }
@@ -82,10 +82,9 @@ async function getActivity(id) {
             );
 
             let data = res.data.data;
-            // console.log(data);
             return data;
       } catch (error) {
-            alert('getMainInformation : ' + error);
+            console.log('getActivity : ' + error);
       }
 }
 
@@ -99,10 +98,8 @@ async function getAverage(id) {
       try {
             if (mock) {
                   const positionArray = IDMock(id);
-
-                  // console.log(mock);
-                  // console.log(USER_AVERAGE_SESSIONS);
                   const test = USER_AVERAGE_SESSIONS[positionArray];
+
                   return test;
             }
             let res = await axios.get(
@@ -113,7 +110,7 @@ async function getAverage(id) {
             // console.log(data);
             return data;
       } catch (error) {
-            alert('getMainInformation : ' + error);
+            console.log('getAverage : ' + error);
       }
 }
 
@@ -124,25 +121,52 @@ async function getAverage(id) {
  */
 
 async function getPerformance(id) {
-
-
-            
-
+      try {
+            if (mock) {
+                  const positionArray = IDMock(id);
+                  let res = USER_PERFORMANCE[positionArray];
+                  const data = res;
+                  const newData = data.data.map((elm) => {
+                        return {
+                              ...elm,
+                              kind: translate[data.kind[elm.kind]],
+                        };
+                  });
+                  return newData;
+            }
             let res = await axios.get(
-                  'http://localhost:3000/user' + `/${id}/performance`
+                  'http://localhost:3000/user/' + `${id}/performance`
             );
 
             let data = res.data.data;
             const newData = data.data.map((elm) => {
-                  // console.log(elm)
                   return {
                         ...elm,
                         kind: translate[data.kind[elm.kind]],
                   };
             });
-
-            return newData;     
-
+            return newData;
+      } catch (error) {
+            console.log('getPerformance : ' + error);
+      }
 }
 
-export { getMainInformation, getActivity, getAverage, getPerformance };
+/**
+ * @function idExist
+ * @param {*} id
+ * @returns filter between user.id and the id that is passed as a parameter
+ */
+
+function idExist(id) {
+      let responseId = false;
+      if (
+            USER_MAIN_DATA.filter((users) => users.id === parseInt(id)).length >
+            0
+      ) {
+            return (responseId = true);
+      }
+
+      console.log(responseId);
+}
+
+export { getMainInformation, getActivity, getAverage, getPerformance, idExist };

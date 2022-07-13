@@ -20,6 +20,16 @@ export default function Linechart(props) {
             { name: 'D', dataLenght: props?.data?.[6] },
       ];
 
+      const CustomTooltip = ({ active, payload }) => {
+            if (active && payload && payload.length) {
+                  return (
+                        <div className="custom-tooltip-linechart">
+                              <p className="tooltip-content-linechart">{`${payload[0].value} min`}</p>
+                        </div>
+                  );
+            }
+      };
+
       return (
             <div className="Linechart">
                   <h2 className="type-stats-linechart">
@@ -35,46 +45,48 @@ export default function Linechart(props) {
                               height={263}
                               data={data}
                               margin={{
-                                    top: 5,
-                                    right: 1,
-                                    bottom: 5,
-                                    left: 1,
+                                    top: 15,
+                                    right: 0,
+                                    bottom: 0,
+                                    left: 0,
                               }}
                               onMouseMove={(e) => {
+                                    let averageResponsive =
+                                          document.querySelector(
+                                                '.averageResponsive'
+                                          );
                                     if (e.isTooltipActive === true) {
-                                          let div =
-                                                document.querySelector(
-                                                      '.averageResponsive'
-                                                );
-                                          let windowWidth = div.clientWidth;
-                                          let mouseXpercentage = Math.round(
+                                          let backgroundTool =
+                                                averageResponsive.clientWidth;
+                                          let mouseX = Math.round(
                                                 (e.activeCoordinate.x /
-                                                      windowWidth) *
+                                                      backgroundTool) *
                                                       100
                                           );
-                                          div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
+                                          averageResponsive.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseX}%, rgba(175,0,0,1.5) ${mouseX}%, rgba(175,0,0,1.5) 100%)`;
                                     }
+                              }}
+                              onMouseOut={() => {
+                                    let averageResponsive =
+                                          document.querySelector(
+                                                '.averageResponsive'
+                                          );
+                                    averageResponsive.style.background = `none`;
                               }}
                         >
                               <span>Durée moyenne des sessions</span>
 
-                              <Tooltip cursor={{ stroke: 'none' }} />
+                              <Tooltip
+                                    content={<CustomTooltip />}
+                                    cursor={{ stroke: 'none' }}
+                                    position={{ y: 100 }}
+                                    wrapperStyle={{ top: -40, left: 10 }}
+                              />
                               <YAxis
                                     hide={true}
                                     domain={['dataMin -15', 'dataMax + 45']}
                               />
-                              <XAxis
-                                    tick={{
-                                          fill: '#ffffff',
-                                          opacity: 0.5,
-                                    }}
-                                    padding={{
-                                          left: 4,
-                                    }}
-                                    tickLine={false}
-                                    axisLine={false}
-                                    dataKey="name"
-                              />
+
                               <Line
                                     className="lineData"
                                     type="natural"
@@ -82,6 +94,23 @@ export default function Linechart(props) {
                                     dot={false}
                                     stroke="#ffffff"
                                     strokeWidth={2}
+                              />
+                              <XAxis
+                                    // dx={-25}
+                                    dy={12}
+                                    tick={{
+                                          fill: '#ffffff',
+                                          opacity: 0.5,
+                                    }}
+                                    padding={{
+                                          left: 10,
+                                          right: 10,
+                                          top: 10,
+                                    }}
+                                    fontSize={12}
+                                    tickLine={false}
+                                    axisLine={false}
+                                    dataKey="name"
                               />
                         </LineChart>
                   </ResponsiveContainer>

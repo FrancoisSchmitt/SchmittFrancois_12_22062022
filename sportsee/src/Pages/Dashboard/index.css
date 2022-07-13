@@ -57,8 +57,9 @@
 .content-profil {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      width: 50%;
+      width: 80%;
+      text-align: left;
+      margin-left: 16%;
 }
 
 .content-profil h1 {
@@ -66,7 +67,6 @@
       font-size: 48px;
       margin-bottom: 0%;
       width: 100%;
-      text-align: center;
 }
 
 .content-profil h1 span {
@@ -74,11 +74,8 @@
 }
 
 .content-profil p {
-      margin-left: 30%;
       font-weight: 400;
       font-size: 18px;
-
       text-align: left;
-      position: relative;
       left: -2.1%;
 }
