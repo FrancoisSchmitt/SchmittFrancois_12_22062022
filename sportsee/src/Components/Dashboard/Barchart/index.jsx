@@ -11,6 +11,17 @@ import {
 import './index.css';
 import propTypes from 'prop-types';
 
+/**
+ * 
+ * @param {*} props 
+ * @returns {JSX.Element}
+ * @const NewData = data?.[number]
+ * @const CustomTooltip is equal to the display of tooltip
+ * @const CustomLegend is equal to the display of Legend
+ */
+
+
+
 export default function Barchart(props) {
       const NewData = [
             {
@@ -125,7 +136,7 @@ export default function Barchart(props) {
                                     radius={[50, 50, 0, 0]}
                               />
                               <YAxis
-                                    tick={{ dx: 35 }}
+                                    tick={{ dx: 45 }}
                                     orientation={'right'}
                                     tickCount={3}
                                     axisLine={false}

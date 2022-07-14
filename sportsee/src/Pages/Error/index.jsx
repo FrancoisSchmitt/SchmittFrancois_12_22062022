@@ -1,6 +1,11 @@
 import Error404 from '../../Components/Error404';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * 
+ * @returns {JSX.Element}
+ */
+
 function Error() {
       return (
             <div className="Choice-profil">

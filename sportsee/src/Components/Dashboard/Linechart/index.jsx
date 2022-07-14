@@ -9,6 +9,12 @@ import {
 } from 'recharts';
 import propTypes from 'prop-types';
 
+/**
+ * 
+ * @param {*} props 
+ * @returns {JSX.Element}
+ */
+
 export default function Linechart(props) {
       const data = [
             { name: 'L', dataLenght: props?.data?.[0] },
@@ -38,6 +44,7 @@ export default function Linechart(props) {
                   <ResponsiveContainer
                         aspect={1.2}
                         className="averageResponsive"
+                        outerRadius='58%'
                   >
                         <LineChart
                               outerRadius="58%"
@@ -103,10 +110,9 @@ export default function Linechart(props) {
                                           opacity: 0.5,
                                     }}
                                     padding={{
-                                          left: 10,
-                                          right: 10,
                                           top: 10,
                                     }}
+                                    interval="preserveStartEnd"
                                     fontSize={12}
                                     tickLine={false}
                                     axisLine={false}

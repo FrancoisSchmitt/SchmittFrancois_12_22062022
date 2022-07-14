@@ -24,8 +24,8 @@ import {
 import './index.css';
 
 /**
- * @function Dashboard
- * @returns Dashboard with api using get.axios
+ * 
+ * @returns {JSX.Element}
  */
 
 export default function Dashboard() {

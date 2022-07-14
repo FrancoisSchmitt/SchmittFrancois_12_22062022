@@ -8,6 +8,12 @@ import {
 } from 'recharts';
 import propTypes from 'prop-types';
 
+/**
+ * 
+ * @param {*} props 
+ * @returns {JSX.Element}
+ */
+
 export default function Radarchart(props) {
       const data = [
             {

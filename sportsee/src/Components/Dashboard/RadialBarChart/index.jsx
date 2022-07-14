@@ -2,6 +2,12 @@ import { RadialBarChart, RadialBar } from 'recharts';
 import './index.css';
 
 import propTypes from 'prop-types';
+/**
+ * 
+ * @param {*} props 
+ * @returns {JSX.Element}
+ */
+
 
 export default function Radialbarchart(props) {
       const data = {

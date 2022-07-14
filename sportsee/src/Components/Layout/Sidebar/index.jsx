@@ -6,9 +6,8 @@ import { NavLink } from 'react-router-dom';
 import './index.css';
 
 /**
- * Nav Components - Layout
- * @returns construction of the left navigation
- * @NavLinks Links that lead nowhere for moment
+ * 
+ * @returns {JSX.Element}
  */
 
 export default function Nav() {

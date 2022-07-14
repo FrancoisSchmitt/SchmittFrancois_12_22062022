@@ -1,17 +1,18 @@
 import { NavLink } from 'react-router-dom';
+import './index.css'
 
 /**
- * Error Components: return pages error
- * @returns Error 404 / files not found
+ * @function Error Components: return pages error
+ * @returns Error 404 / files not found and redirect to "./"
  */
 
 export default function Error() {
       return (
             <section className="error">
                   <div className="error-content">
-                        <h1 className="error-404-information">
+                        <h2 className="error-404-information">
                               La page demandez n'existe pas.
-                        </h1>
+                        </h2>
                   </div>
                   <NavLink
                         to="/"

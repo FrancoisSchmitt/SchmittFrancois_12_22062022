@@ -7,7 +7,8 @@ import {
 } from '../Mock/data';
 
 /**
- * @var translate api english to french
+ * @const translate api english to french
+ * @const mock = false, if true the website use data to ../Mock/data.js
  */
 
 const mock = false;
@@ -26,6 +27,24 @@ const translate = {
  * @param {*} id
  * @returns Id: 0  = 12 or Id: 1 = 18
  */
+
+/**
+ * @function idExist
+ * @param {*} id
+ * @returns filter between user.id and the id that is passed as a parameter
+ */
+
+ function idExist(id) {
+      let responseId = false;
+      if (
+            USER_MAIN_DATA.filter((users) => users.id === parseInt(id)).length >
+            0
+      ) {
+            return (responseId = true);
+      }
+
+      console.log(responseId);
+}
 
 function IDMock(id) {
       let positionID = 0;
@@ -149,24 +168,6 @@ async function getPerformance(id) {
       } catch (error) {
             console.log('getPerformance : ' + error);
       }
-}
-
-/**
- * @function idExist
- * @param {*} id
- * @returns filter between user.id and the id that is passed as a parameter
- */
-
-function idExist(id) {
-      let responseId = false;
-      if (
-            USER_MAIN_DATA.filter((users) => users.id === parseInt(id)).length >
-            0
-      ) {
-            return (responseId = true);
-      }
-
-      console.log(responseId);
 }
 
 export { getMainInformation, getActivity, getAverage, getPerformance, idExist };

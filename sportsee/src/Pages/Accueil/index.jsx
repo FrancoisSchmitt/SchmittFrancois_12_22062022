@@ -1,6 +1,9 @@
 import './index.css';
 import { NavLink } from 'react-router-dom';
-
+/**
+ * 
+ * @returns {JSX.Element}
+ */
 export default function Accueil() {
       return (
             <div className="Choice-profil">

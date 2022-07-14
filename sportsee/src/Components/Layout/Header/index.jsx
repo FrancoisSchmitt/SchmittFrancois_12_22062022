@@ -4,9 +4,8 @@ import { NavLink } from 'react-router-dom';
 import './index.css';
 
 /**
- * Header Components - Layout
- * @returns construction of the header
- * @NavLinks Links that lead nowhere for moment
+ * 
+ * @returns {JSX.Element}
  */
 
 export default function Header() {

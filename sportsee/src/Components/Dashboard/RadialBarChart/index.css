@@ -1,40 +1,40 @@
 .score-radial {
-      background-color: #fbfbfb;
-      width: 258px;
-      height: 263px;
-      border-radius: 10px;
+    background-color: #fbfbfb;
+    width: 258px;
+    height: 263px;
+    border-radius: 10px;
 }
 
 .type-stats {
-      font-size: 18px;
-      position: absolute;
-      font-style: normal;
-      right: 38%;
+    font-size: 18px;
+    position: absolute;
+    font-style: normal;
+    right: 39%;
 }
 
 .score-graphique {
-      align-items: center;
-      display: flex;
-      justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .score-pourcentage {
-      background-color: #ffffff;
-      border-radius: 50%;
-      color: #74798c;
-      display: flex;
-      flex-direction: column;
-      font-size: 18px;
-      height: 190px;
-      justify-content: center;
-      position: absolute;
-      text-align: center;
-      width: 190px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #74798c;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 190px;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    width: 190px;
 }
 
 .score-finally {
-      color: #000;
-      display: block;
-      font-size: 24px;
-      font-weight: bold;
+    color: #000;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
 }

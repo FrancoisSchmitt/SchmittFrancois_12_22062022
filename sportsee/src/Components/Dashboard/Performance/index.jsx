@@ -1,6 +1,10 @@
 import './index.css';
 import propTypes from 'prop-types';
-
+/**
+ * 
+ * @param {*} param0 
+ * @returns {JSX.Element}
+ */
 export default function Performance({ img, data, dataType, className }) {
       return (
             <div className="performance-content">
