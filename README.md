@@ -48,7 +48,7 @@ To start the api :
 - Once the api and the website is launched go to the folder `sportsee/src/Service/call.jsx` And change the value of the **mock** variable from **true** to **false**  to the line **14**
 
 
-## 3 Endpoints
+## 3. Endpoints
 
 ### 3.1 View Website user
 
