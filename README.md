@@ -6,6 +6,18 @@ This repo contains all the source code to run website and the micro API for the 
 
 This site uses a version with an api and another version with a data mock.
 
+### 1.1 Project version 
+
+This project was started with [Create React App](https://github.com/facebook/create-react-app) and uses
+
+- React (18.2.0)
+- Rechart (2.1.12)
+- Axios (0.27.2)
+- react-router-dom (6.3.0)
+- prop-types (15.8.1)
+
+We recommend to use Visual Studio Code to edit and launch this project and lastest version of Chrome browser 
+
 ## 2. Project
 
 ### 2.1 Prerequisites
