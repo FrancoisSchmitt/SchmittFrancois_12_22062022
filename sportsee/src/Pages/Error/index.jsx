@@ -2,7 +2,7 @@ import Error404 from '../../Components/Error404';
 import { NavLink } from 'react-router-dom';
 
 /**
- * 
+ * @function Error - return html element
  * @returns {JSX.Element}
  */
 

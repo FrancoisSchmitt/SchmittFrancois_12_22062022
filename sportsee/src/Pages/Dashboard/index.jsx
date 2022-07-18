@@ -24,7 +24,7 @@ import {
 import './index.css';
 
 /**
- * 
+ * @function Dashboard - return html element with data 
  * @returns {JSX.Element}
  */
 

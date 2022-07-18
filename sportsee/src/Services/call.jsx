@@ -11,7 +11,7 @@ import {
  * @const mock = false, if true the website use data to ../Mock/data.js
  */
 
-const mock = false;
+const mock = true;
 
 const translate = {
       energy: 'Energie',
@@ -22,16 +22,11 @@ const translate = {
       intensity: 'Intensité',
 };
 
-/**
- * @function IdMock
- * @param {*} id
- * @returns Id: 0  = 12 or Id: 1 = 18
- */
+
 
 /**
- * @function idExist
+ * @function idExist - filter ids to check if they exist
  * @param {*} id
- * @returns filter between user.id and the id that is passed as a parameter
  */
 
  function idExist(id) {
@@ -42,9 +37,13 @@ const translate = {
       ) {
             return (responseId = true);
       }
-
-      console.log(responseId);
 }
+
+/**
+ * @function IdMock - switch that checks if the id = 12 and returns 0 or 18 and returns 1
+ * @param {*} id
+ * @returns {number}
+ */
 
 function IDMock(id) {
       let positionID = 0;
@@ -61,9 +60,8 @@ function IDMock(id) {
       return positionID;
 }
 /**
- * @function getMainInformation
+ * @function getMainInformation - try a condition if mock = true and it returns the mock data otherwise it returns the GET api request 
  * @param {*} id
- * @returns data of main information
  */
 
 async function getMainInformation(id) {
@@ -84,9 +82,8 @@ async function getMainInformation(id) {
 }
 
 /**
- * @function getActivity
+ * @function getActivity - try a condition if mock = true and it returns the mock data otherwise it returns the GET api request 
  * @param {*} id
- * @returns data of activity users
  */
 
 async function getActivity(id) {
@@ -108,9 +105,8 @@ async function getActivity(id) {
 }
 
 /**
- * @function getAverage
+ * @function getAverage - try a condition if mock = true and it returns the mock data otherwise it returns the GET api request 
  * @param {*} id
- * @returns data of average-sessions users
  */
 
 async function getAverage(id) {
@@ -134,9 +130,9 @@ async function getAverage(id) {
 }
 
 /**
- * @function getPerformance
+ * @function getPerformance - try a condition if mock = true and it returns the mock data otherwise it returns the GET api request 
  * @param {*} id
- * @returns performance of users
+ * @const newData - change the data in the table for the translation from English to French
  */
 
 async function getPerformance(id) {

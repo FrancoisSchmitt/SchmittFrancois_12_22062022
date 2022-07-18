@@ -1,7 +1,7 @@
 import './index.css';
 import { NavLink } from 'react-router-dom';
 /**
- * 
+ * @function Accueil - return html link element
  * @returns {JSX.Element}
  */
 export default function Accueil() {
