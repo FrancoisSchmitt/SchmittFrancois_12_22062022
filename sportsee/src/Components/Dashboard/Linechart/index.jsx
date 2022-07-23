@@ -71,6 +71,7 @@ export default function Linechart(props) {
                                                       100
                                           );
                                           averageResponsive.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseX}%, rgba(175,0,0,1.5) ${mouseX}%, rgba(175,0,0,1.5) 100%)`;
+                                          averageResponsive.style.borderRadius = "10px";
                                     }
                               }}
                               onMouseOut={() => {
@@ -101,6 +102,7 @@ export default function Linechart(props) {
                                     dot={false}
                                     stroke="#ffffff"
                                     strokeWidth={2}
+
                               />
                               <XAxis
                                     // dx={-25}

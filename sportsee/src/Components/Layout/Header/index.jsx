@@ -35,7 +35,7 @@ export default function Header() {
                                     Accueil
                               </NavLink>
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'nav-link-home Error-return-menu' +
                                           (!isActive ? ' unselected' : '')
@@ -44,7 +44,7 @@ export default function Header() {
                                     Profil
                               </NavLink>
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'nav-link-home Error-return-menu' +
                                           (!isActive ? ' unselected' : '')
@@ -53,7 +53,7 @@ export default function Header() {
                                     Réglage
                               </NavLink>
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'nav-link-home Error-return-menu' +
                                           (!isActive ? ' unselected' : '')

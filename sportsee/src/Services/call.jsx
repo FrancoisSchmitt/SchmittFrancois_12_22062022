@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-concat */
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import {
       USER_ACTIVITY,

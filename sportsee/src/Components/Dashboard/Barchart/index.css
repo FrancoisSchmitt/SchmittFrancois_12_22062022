@@ -1,64 +1,64 @@
 .barchart {
-      width: 835px;
-      height: 320px;
-      background: #fbfbfb;
-      border-radius: 10px;
+    width: 835px;
+    height: 320px;
+    background: #fbfbfb;
+    border-radius: 10px;
 }
 
 .recharts-responsive-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .custom-tooltip {
-      background-color: red;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 39px;
-      height: 63px;
-      justify-content: center;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 39px;
+    height: 63px;
+    justify-content: center;
 }
 
 .tooltip-content {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 9px !important;
-      color: white !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px !important;
+    color: white !important;
 }
 
 .custom-legend,
 .legend-content {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: right;
-      width: 100%;
-      margin-top: -6%;
-      margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: right;
+    width: 100%;
+    margin-top: -6%;
+    margin-left: auto;
 }
 
 .legend-title {
-      width: 100%;
-      display: flex;
-      margin-right: auto;
-      justify-content: left;
-      align-items: center;
+    width: 100%;
+    display: flex;
+    margin-right: auto;
+    justify-content: left;
+    align-items: center;
 }
 
 .color-kg,
 .color-Kcal {
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      margin-right: 4%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 4%;
 }
 
 .color-kg {
-      background-color: black;
+    background-color: black;
 }
 
 .color-Kcal {
-      background-color: red;
+    background-color: red;
 }

@@ -16,7 +16,7 @@ export default function Nav() {
                   <div className="side-nav">
                         <ul className="nav-menu">
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'navigation-link' +
                                           (!isActive ? ' unselected' : '')
@@ -32,7 +32,7 @@ export default function Nav() {
                               </NavLink>
 
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'navigation-link' +
                                           (!isActive ? ' unselected' : '')
@@ -48,7 +48,7 @@ export default function Nav() {
                               </NavLink>
 
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'navigation-link' +
                                           (!isActive ? ' unselected' : '')
@@ -64,7 +64,7 @@ export default function Nav() {
                               </NavLink>
 
                               <NavLink
-                                    to="/"
+                                    to="#"
                                     className={(isActive) =>
                                           'navigation-link' +
                                           (!isActive ? ' unselected' : '')
